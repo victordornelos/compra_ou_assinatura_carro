@@ -42,3 +42,40 @@ def Custo_oportunidade(preco,entrada,taxa, tempo):
     else:
         rendimento_liquido = rendimento * (1 - (15 / 100))
         return rendimento_liquido
+
+def Manutencao(tempo):
+    if tempo == 12:
+        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
+        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        return pneu + ano1
+    if tempo == 24:
+        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
+        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        return pneu + ano1 + ano2
+
+    if tempo == 36:
+        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
+        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano3 = float(input('Qual o custo de manutenção durante o terceiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        return pneu + ano1 + ano2 + ano3
+    else:
+        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
+        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano3 = float(input('Qual o custo de manutenção durante o terceiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        ano4 = float(input('Qual o custo de manutenção durante o terceiro ano? '
+                           'lembre-se varia conforme quilometragem: '))
+        return pneu + ano1 + ano2 + ano3 + ano4
+
+
