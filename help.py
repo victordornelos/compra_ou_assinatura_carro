@@ -30,3 +30,15 @@ def Tempo():
             return int(tempo)
         else:
             print("Por favor, escolha um prazo válido: 12, 24, 36 ou 48 meses.")
+
+
+def Custo_oportunidade(preco,entrada,taxa, tempo):
+    capital = preco * entrada
+    montante = capital * (1 + taxa) ** (tempo/12)
+    rendimento = montante - capital
+    if tempo == 12:
+        rendimento_liquido = rendimento * (1-(17.5/100))
+        return rendimento_liquido
+    else:
+        rendimento_liquido = rendimento * (1 - (15 / 100))
+        return rendimento_liquido
