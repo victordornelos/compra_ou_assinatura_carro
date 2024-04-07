@@ -29,7 +29,7 @@ def Calculadora():
 
         depreciacao_real = Depreciacao_real(preco_carro,tempo,taxa_depreciacao,ipca)
 
-        Valor_mercado(preco_carro,tempo,taxa_depreciacao)
+        valor_mercado(preco_carro,tempo,taxa_depreciacao)
 
         return juros,custo_oportunidade,manutencao,depreciacao_real
 
