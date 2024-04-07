@@ -1,6 +1,7 @@
 
 from help import formata_float_str_moeda
-from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao
+from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado
+
 def Calculadora():
 
     print('--------------------------------------')
@@ -21,15 +22,28 @@ def Calculadora():
         taxa_de_juros = float(input('Quantos valor da taxa de juros em porcentagem? '))
         valor_principal = preco_carro * (1 - percentual)
         juros = calcular_pagamento_price(valor_principal, taxa_de_juros,tempo)
+
         custo_oportunidade = Custo_oportunidade(preco_carro,percentual,tr_real,tempo)
+
         manutencao = Manutencao(tempo)
-        return juros,custo_oportunidade,manutencao
+
+        depreciacao_real = Depreciacao_real(preco_carro,tempo,taxa_depreciacao,ipca)
+
+        Valor_mercado(preco_carro,tempo,taxa_depreciacao)
+
+        return juros,custo_oportunidade,manutencao,depreciacao_real
 
     else:
+
         juros = 0
+
         custo_oportunidade = Custo_oportunidade(preco_carro,1,tr_real, tempo)
+
         manutencao = Manutencao(tempo)
-        return juros, custo_oportunidade,manutencao
+
+        depreciacao_real = Depreciacao_real(preco_carro, tempo, taxa_depreciacao, ipca)
+
+        return juros, custo_oportunidade,manutencao,depreciacao_real
 
 
 resultado = Calculadora()

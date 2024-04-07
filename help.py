@@ -78,4 +78,16 @@ def Manutencao(tempo):
                            'lembre-se varia conforme quilometragem: '))
         return pneu + ano1 + ano2 + ano3 + ano4
 
+def Depreciacao_real(preco,tempo,taxa,ipca):
 
+        depreciacao_real = (preco*(1- (((1+ taxa/100)*(1+ipca/100))-1)*100)^tempo - preco)
+        return depreciacao_real
+
+def Valor_mercado(preco, tempo, taxa):
+    valores_mercado = []
+    tempo = int(tempo/ 12 )
+    for ano in range(1, tempo + 1):
+        valor_atual = preco * (1 - taxa) ** (ano - 1)
+        valores_mercado.append(valor_atual)
+
+    return valores_mercado
