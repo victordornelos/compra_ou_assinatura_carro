@@ -15,7 +15,6 @@ def calcular_pagamento_price(financiamento, taxa, tempo):
         juros_total= sum(parcelas) - (financiamento)
     return juros_total
 
-
 def Metodo_pagamento():
     while True:
         metodo_pagamento = input('Deseja financiar o carro? (sim ou não):')
@@ -106,5 +105,4 @@ def Imposto (lista,tempo):
     soma = (taxa * (sum(lista))) + (duda * tempo) + emplacamento + duda_primeira
 
     return soma
-valor = Valor_mercado(118990,48,8/100)
-print(Imposto(valor,48))
+

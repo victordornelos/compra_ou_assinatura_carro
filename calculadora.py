@@ -1,10 +1,6 @@
 
 from help import formata_float_str_moeda
 from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado, Seguro, Imposto
-
-def main():
-    Calculadora_compra()
-
 def Calculadora_compra():
     print('--------------------------------------')
     print('Bem-vindo a calculadora de oportunidade')
@@ -51,19 +47,10 @@ def Calculadora_compra():
 
         seguro = Seguro(valor_mercado)
 
-        imposto = Imposto(valor_mercado, tempo)
+        imposto = Imposto(valor_mercado,tempo)
 
         return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto
 
-        
-
-resultado = Calculadora()
-print("Resultado:", resultado)
-
-
-if __name__ =='__main__':
-    main()
-
-
+print(Calculadora_compra())
 
 
