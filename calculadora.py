@@ -1,8 +1,11 @@
 
 from help import formata_float_str_moeda
-from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado
+from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado, Seguro, Imposto
 
-def Calculadora():
+def main():
+    Calculadora_compra()
+
+def Calculadora_compra():
 
     print('--------------------------------------')
     print('Bem-vindo a calculadora de oportunidade')
@@ -29,9 +32,13 @@ def Calculadora():
 
         depreciacao_real = Depreciacao_real(preco_carro,tempo,taxa_depreciacao,ipca)
 
-        valor_mercado(preco_carro,tempo,taxa_depreciacao)
+        valor_mercado = Valor_mercado(preco_carro,tempo,taxa_depreciacao)
 
-        return juros,custo_oportunidade,manutencao,depreciacao_real
+        seguro = Seguro(valor_mercado)
+
+        imposto = Imposto(valor_mercado,tempo)
+
+        return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto
 
     else:
 
@@ -43,13 +50,20 @@ def Calculadora():
 
         depreciacao_real = Depreciacao_real(preco_carro, tempo, taxa_depreciacao, ipca)
 
-        return juros, custo_oportunidade,manutencao,depreciacao_real
+        seguro = Seguro(valor_mercado)
 
+        imposto = Imposto(valor_mercado, tempo)
+
+        return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto
+
+        
 
 resultado = Calculadora()
 print("Resultado:", resultado)
 
 
+if __name__ =='__main__':
+    main()
 
 
 

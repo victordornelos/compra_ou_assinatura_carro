@@ -92,4 +92,19 @@ def Valor_mercado(preco, tempo, taxa):
 
     return valores_mercado
 
-print(Depreciacao_real(118990,48,8/100,4.5/100))
+def Seguro(lista):
+    taxa = 5.8 /100
+    seguro = sum(lista) * taxa
+    return seguro
+
+def Imposto (lista,tempo):
+    tempo = int(tempo / 12)
+    taxa = (float(input('Qual a taxa de IPVA de seu Estado? '))) / 100
+    duda = float(input('Qual o valor do licenciamento anual de seu Estado? '))
+    emplacamento = float(input('Qual o valor do emplacamento de seu Estado? '))
+    duda_primeira = float(input('Qual o valor do duda de primeira licença de seu Estado? '))
+    soma = (taxa * (sum(lista))) + (duda * tempo) + emplacamento + duda_primeira
+
+    return soma
+valor = Valor_mercado(118990,48,8/100)
+print(Imposto(valor,48))
