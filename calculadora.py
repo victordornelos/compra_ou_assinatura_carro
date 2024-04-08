@@ -6,7 +6,6 @@ def main():
     Calculadora_compra()
 
 def Calculadora_compra():
-
     print('--------------------------------------')
     print('Bem-vindo a calculadora de oportunidade')
     print('--------------------------------------')
