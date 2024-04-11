@@ -116,4 +116,10 @@ def Imposto (lista,tempo):
 
     return soma
 
-print(Manutencao(48))
+def Reajuste():
+    while True:
+        reajuste = input('O serviço de assinatura tem reajuste com a inflação? (sim ou não):')
+        if reajuste in ['sim','não']:
+            return reajuste
+        else:
+            print("Por favor, escolha uma opção válida: sim ou não")
