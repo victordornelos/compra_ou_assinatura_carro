@@ -5,7 +5,7 @@ def Obter_valor(msg):
     while True:
         try:
             valor = float(input(f'{msg}'))
-            return valor  # Retorna o preço do carro se for um número válido
+            return valor
         except ValueError:
             print("Por favor, insira um valor válido.")
 
