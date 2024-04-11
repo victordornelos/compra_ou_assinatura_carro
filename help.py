@@ -1,4 +1,4 @@
-def formata_float_str_moeda(valor: float)-> str:
+def formata_float_str_moeda(valor):
     return f'R$ {valor:,.2f}'
 
 def Obter_valor(msg):
@@ -12,7 +12,7 @@ def Obter_valor(msg):
 def calcular_pagamento_price(financiamento, taxa, tempo):
     taxa = (taxa/ 100) + 0.25/100
     saldo_inicial = financiamento * 1.0038
-    valor_parcela = saldo_inicial * (taxa / (1 - ((1 + taxa) ** (-tempo))))
+    valor_parcela = saldo_inicial * (taxa / (1 - (1 + taxa) ** (-tempo)))
     parcelas = []
     for a in range(tempo):
         juros = saldo_inicial * taxa
@@ -52,10 +52,9 @@ def Custo_oportunidade(preco,entrada,taxa, tempo):
 
 def Manutencao(tempo):
     if tempo == 12:
-        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0:')
         ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
                            'lembre-se varia conforme quilometragem: ')
-        return pneu + ano1
+        return ano1
     if tempo == 24:
         pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
 
