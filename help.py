@@ -1,6 +1,14 @@
 def formata_float_str_moeda(valor: float)-> str:
     return f'R$ {valor:,.2f}'
 
+def Obter_valor(msg):
+    while True:
+        try:
+            valor = float(input(f'{msg}'))
+            return valor  # Retorna o preço do carro se for um número válido
+        except ValueError:
+            print("Por favor, insira um valor válido.")
+
 def calcular_pagamento_price(financiamento, taxa, tempo):
     taxa = (taxa/ 100) + 0.25/100
     saldo_inicial = financiamento * 1.0038
@@ -44,37 +52,39 @@ def Custo_oportunidade(preco,entrada,taxa, tempo):
 
 def Manutencao(tempo):
     if tempo == 12:
-        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
-        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
+        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0:')
+        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: ')
         return pneu + ano1
     if tempo == 24:
-        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
-        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
-                           'lembre-se varia conforme quilometragem: '))
+        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+
+        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+                           'lembre-se varia conforme quilometragem: ')
+        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
         return pneu + ano1 + ano2
 
     if tempo == 36:
-        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
-        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano3 = float(input('Qual o custo de manutenção durante o terceiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
+        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+
+        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+                               'lembre-se varia conforme quilometragem: ')
+        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
+
+        ano3 = Obter_valor(msg='Qual o custo de manutenção durante o terceiro ano? ')
+
         return pneu + ano1 + ano2 + ano3
     else:
-        pneu = float(input('Custo do pneu? Se não trocou o custo deve ser 0: '))
-        ano1 = float(input('Qual o custo de manutenção durante o primeiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano2 = float(input('Qual o custo de manutenção durante o segundo ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano3 = float(input('Qual o custo de manutenção durante o terceiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
-        ano4 = float(input('Qual o custo de manutenção durante o terceiro ano? '
-                           'lembre-se varia conforme quilometragem: '))
+        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+
+        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+                               'lembre-se varia conforme quilometragem: ')
+        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
+
+        ano3 = Obter_valor(msg='Qual o custo de manutenção durante o terceiro ano? ')
+
+        ano4 = Obter_valor(msg='Qual o custo de manutenção durante o quarto ano? ')
+
         return pneu + ano1 + ano2 + ano3 + ano4
 
 def Depreciacao_real(preco, tempo, taxa, ipca):
@@ -98,11 +108,12 @@ def Seguro(lista):
 
 def Imposto (lista,tempo):
     tempo = int(tempo / 12)
-    taxa = (float(input('Qual a taxa de IPVA de seu Estado? '))) / 100
-    duda = float(input('Qual o valor do licenciamento anual de seu Estado? '))
-    emplacamento = float(input('Qual o valor do emplacamento de seu Estado? '))
-    duda_primeira = float(input('Qual o valor do duda de primeira licença de seu Estado? '))
+    taxa = Obter_valor(msg='Qual a taxa de IPVA do Estado? ') / 100
+    duda = Obter_valor(msg='Qual o custo do licenciamento anual do Estado? ')
+    emplacamento = Obter_valor(msg='Qual o valor do emplacamento de seu Estado? ')
+    duda_primeira = Obter_valor(msg='Qual o valor do duda de primeira licença de seu Estado? ')
     soma = (taxa * (sum(lista))) + (duda * tempo) + emplacamento + duda_primeira
 
     return soma
 
+print(Manutencao(48))

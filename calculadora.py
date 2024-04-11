@@ -1,12 +1,12 @@
 
 from help import formata_float_str_moeda
-from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado, Seguro, Imposto
+from  help import calcular_pagamento_price, Metodo_pagamento, Tempo, Custo_oportunidade,Manutencao,Depreciacao_real, Valor_mercado, Seguro, Imposto,Obter_valor
 def Calculadora_compra():
     print('--------------------------------------')
     print('Bem-vindo a calculadora de oportunidade')
     print('--------------------------------------')
     carro = str(input('Qual modelo do carro? '))
-    preco_carro = float(input('Qual o preço de compra do carro? '))
+    preco_carro = Obter_valor(msg='Qual o preço do carro? ')
     tempo = Tempo()
     metodo_pagamento = Metodo_pagamento()
     ipca = 4.5 / 100
@@ -16,8 +16,8 @@ def Calculadora_compra():
 
     if metodo_pagamento == 'sim':
 
-        percentual = float(input('Quantos porcentos de entrada? ')) / 100
-        taxa_de_juros = float(input('Quantos valor da taxa de juros em porcentagem? '))
+        percentual = Obter_valor(msg='Quanto porcentos de entrada ? ') / 100
+        taxa_de_juros = Obter_valor(msg='Quantos valor da taxa de juros em porcentagem? ') / 100
         valor_principal = preco_carro * (1 - percentual)
         juros = calcular_pagamento_price(valor_principal, taxa_de_juros,tempo)
 
@@ -33,7 +33,7 @@ def Calculadora_compra():
 
         imposto = Imposto(valor_mercado,tempo)
 
-        return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto
+        return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro
 
     else:
 
@@ -49,7 +49,7 @@ def Calculadora_compra():
 
         imposto = Imposto(valor_mercado,tempo)
 
-        return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto
+        return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto,carro
 
 print(Calculadora_compra())
 
