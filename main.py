@@ -27,7 +27,7 @@ def main():
 
     if saldo < 0:
         print('Obrigado por todas informações!')
-        print('O resultado é')
+        print('Calculando o resultando')
         time.sleep(1)
         print('.')
         time.sleep(1)
@@ -35,7 +35,7 @@ def main():
         time.sleep(1)
         print('.')
         print(f'A melhor opção é comprar o {df['Carro'].values[0]}, com uma economia de  R$ {modulo_saldo:,.2f}')
-        print('Esse gráfico pode ajudar em perceber quais são os maiores custos')
+        print('Este gráfico pode ajudar em perceber quais são os principais custos')
         time.sleep(1)
         print('.')
         time.sleep(1)
@@ -51,9 +51,10 @@ def main():
         print('.')
         print('Obrigado!')
         print('Volte sempre')
+
     else:
         print('Obrigado por todas informações!')
-        print('O resultado é')
+        print('Calculando o resultando')
         time.sleep(1)
         print('.')
         time.sleep(1)
@@ -61,6 +62,7 @@ def main():
         time.sleep(1)
         print('.')
         print(f'A melhor opção é assinar o {df['Carro'].values[0]}, com uma economia de R$ {modulo_saldo:,.2f}')
+        print('Este gráfico pode ajudar em perceber quais são os principais custos')
         time.sleep(1)
         print('.')
         time.sleep(1)
