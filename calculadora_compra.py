@@ -17,7 +17,7 @@ def Calculadora_compra():
     if metodo_pagamento == 'sim':
 
         percentual = Obter_valor(msg='Quanto porcentos de entrada ? ') / 100
-        taxa_de_juros = Obter_valor(msg='Quantos valor da taxa de juros em porcentagem? ') / 100
+        taxa_de_juros = Obter_valor(msg='Quantos valor da taxa de juros em porcentagem? ')
         valor_principal = preco_carro * (1- percentual)
         juros = calcular_pagamento_price(valor_principal, taxa_de_juros,tempo)
 
@@ -33,7 +33,7 @@ def Calculadora_compra():
 
         imposto = Imposto(valor_mercado,tempo)
 
-        return valor_principal,juros, custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro,metodo_pagamento,preco_carro,tempo
+        return juros, custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro,metodo_pagamento,preco_carro,tempo
 
     else:
 
@@ -53,8 +53,6 @@ def Calculadora_compra():
 
         return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro,metodo_pagamento,preco_carro,tempo
 
-resultado = Calculadora_compra()
-print(resultado)
 
 
 
