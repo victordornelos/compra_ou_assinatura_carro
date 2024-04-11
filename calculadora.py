@@ -33,7 +33,7 @@ def Calculadora_compra():
 
         imposto = Imposto(valor_mercado,tempo)
 
-        return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro
+        return juros,custo_oportunidade,manutencao,depreciacao_real, valor_mercado,seguro,imposto,carro,metodo_pagamento
 
     else:
 
@@ -49,7 +49,7 @@ def Calculadora_compra():
 
         imposto = Imposto(valor_mercado,tempo)
 
-        return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto,carro
+        return juros, custo_oportunidade,manutencao,depreciacao_real, seguro, imposto,carro, metodo_pagamento
 
 print(Calculadora_compra())
 
