@@ -7,13 +7,12 @@ E-mail: adrianoflu16@gmail.com | luizfcefetrj@gmail.com | victor.dornelos@hotmai
 
 ### Sumário: 
 
--------------------------------------------------------------------------------------------------------------
-| [1. Objetivo](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#1-objetivo)| \
-|[2. Metodologia](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#2-metodologia)| \
-|[3. Cenário Base](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#3-cenário-base)| \
-|[4. Os diferentes cenários](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#4-os-diferentes-cenários)| \
-|[5. Considerando outras opções](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#5-considerando-outras-opções)| \
-|[6. Conclusão](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#6-conclusão)|
+[1. Objetivo](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#1-objetivo) \
+[2. Metodologia](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#2-metodologia) \
+[3. Cenário Base](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#3-cenário-base) \
+[4. Os diferentes cenários](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#4-os-diferentes-cenários) \
+[5. Considerando outras opções](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#5-considerando-outras-opções) \
+[6. Conclusão](https://github.com/victordornelos/compra_ou_assinatura_carro?tab=readme-ov-file#6-conclusão)
 
 ## 1. Objetivo:
 
