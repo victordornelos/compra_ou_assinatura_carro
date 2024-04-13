@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
+--pycache__
 
 __pycache__/calculadora_assinatura.cpython-312.pyc
-__pycache__/calculadora_assinatura.cpython-312.pyc
+__pycache__/calculadora_compra.cpython-312.pyc'
 __pycache__/help.cpython-312.pyc
