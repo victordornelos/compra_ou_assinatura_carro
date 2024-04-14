@@ -1,7 +1,7 @@
 from help import  Obter_valor
 from help import Reajuste
 def Calculo_assinatura(tempo):
-    assinatura = Obter_valor(msg='Qual o valor da mensalidade da assinatura? ')
+    assinatura = Obter_valor(msg='Qual é o valor da mensalidade da assinatura? ')
     reajuste = Reajuste()
     ipca = 4.5 / 100
 

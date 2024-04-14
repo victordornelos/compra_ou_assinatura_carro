@@ -5,8 +5,8 @@ def Calculadora_compra():
     print('--------------------------------------')
     print('Bem-vindo a calculadora de oportunidade')
     print('--------------------------------------')
-    carro = str(input('Qual modelo do carro? '))
-    preco_carro = Obter_valor(msg='Qual o preço do carro? ')
+    carro = str(input('Qual é o modelo do carro? '))
+    preco_carro = Obter_valor(msg='Qual é o preço do carro? ')
     tempo = Tempo()
     metodo_pagamento = Metodo_pagamento()
     ipca = 4.5 / 100
@@ -16,8 +16,8 @@ def Calculadora_compra():
 
     if metodo_pagamento == 'sim':
 
-        percentual = Obter_valor(msg='Quanto porcentos de entrada ? ') / 100
-        taxa_de_juros = Obter_valor(msg='Quantos valor da taxa de juros em porcentagem? ')
+        percentual = Obter_valor(msg='Quanto é a porcentagem de entrada? ') / 100
+        taxa_de_juros = Obter_valor(msg='Qual o valor da taxa de juros em porcentagem? ')
         valor_principal = preco_carro * (1- percentual)
         juros = calcular_pagamento_price(valor_principal, taxa_de_juros,tempo)
 

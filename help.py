@@ -1,6 +1,3 @@
-def formata_float_str_moeda(valor):
-    return f'R$ {valor:,.2f}'
-
 def Obter_valor(msg):
     while True:
         try:
@@ -32,7 +29,7 @@ def Metodo_pagamento():
             print("Por favor, escolha uma opção válida: sim ou não")
 def Tempo():
     while True:
-        tempo = input('Quanto tempo deseja ficar com o carro? (12, 24, 36 ou 48 meses): ')
+        tempo = input('Qual é o tempo deseja ficar com o carro? (12, 24, 36 ou 48 meses): ')
         if tempo in ['12', '24', '36', '48']:
             return int(tempo)
         else:
@@ -52,37 +49,37 @@ def Custo_oportunidade(preco,entrada,taxa, tempo):
 
 def Manutencao(tempo):
     if tempo == 12:
-        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+        ano1 = Obter_valor(msg='Qual é o custo de manutenção durante o primeiro ano? '
                            'lembre-se varia conforme quilometragem: ')
         return ano1
     if tempo == 24:
-        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+        pneu = Obter_valor(msg='Qual é o custo do pneu? Se não trocou o custo deve ser 0: ')
 
-        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+        ano1 = Obter_valor(msg='Qual é o custo de manutenção durante o primeiro ano? '
                            'lembre-se varia conforme quilometragem: ')
-        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
+        ano2 = Obter_valor(msg='Qual é o custo de manutenção durante o segundo ano? ')
         return pneu + ano1 + ano2
 
     if tempo == 36:
-        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+        pneu = Obter_valor(msg='Qual é o custo do pneu? Se não trocou o custo deve ser 0: ')
 
-        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+        ano1 = Obter_valor(msg='Qual é o custo de manutenção durante o primeiro ano? '
                                'lembre-se varia conforme quilometragem: ')
-        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
+        ano2 = Obter_valor(msg='Qual é o custo de manutenção durante o segundo ano? ')
 
-        ano3 = Obter_valor(msg='Qual o custo de manutenção durante o terceiro ano? ')
+        ano3 = Obter_valor(msg='Qual é o custo de manutenção durante o terceiro ano? ')
 
         return pneu + ano1 + ano2 + ano3
     else:
-        pneu = Obter_valor(msg='Custo do pneu? Se não trocou o custo deve ser 0: ')
+        pneu = Obter_valor(msg='Qual é o custo do pneu? Se não trocou o custo deve ser 0: ')
 
-        ano1 = Obter_valor(msg='Qual o custo de manutenção durante o primeiro ano? '
+        ano1 = Obter_valor(msg='Qual é o custo de manutenção durante o primeiro ano? '
                                'lembre-se varia conforme quilometragem: ')
-        ano2 = Obter_valor(msg='Qual o custo de manutenção durante o segundo ano? ')
+        ano2 = Obter_valor(msg='Qual é o custo de manutenção durante o segundo ano? ')
 
-        ano3 = Obter_valor(msg='Qual o custo de manutenção durante o terceiro ano? ')
+        ano3 = Obter_valor(msg='Qual é o custo de manutenção durante o terceiro ano? ')
 
-        ano4 = Obter_valor(msg='Qual o custo de manutenção durante o quarto ano? ')
+        ano4 = Obter_valor(msg='Qual é o custo de manutenção durante o quarto ano? ')
 
         return pneu + ano1 + ano2 + ano3 + ano4
 
@@ -107,10 +104,10 @@ def Seguro(lista):
 
 def Imposto (lista,tempo):
     tempo = int(tempo / 12)
-    taxa = Obter_valor(msg='Qual a taxa de IPVA do Estado? ') / 100
-    duda = Obter_valor(msg='Qual o custo do licenciamento anual do Estado? ')
-    emplacamento = Obter_valor(msg='Qual o valor do emplacamento de seu Estado? ')
-    duda_primeira = Obter_valor(msg='Qual o valor do duda de primeira licença de seu Estado? ')
+    taxa = Obter_valor(msg='Qual é a taxa de IPVA do Estado? ') / 100
+    duda = Obter_valor(msg='Qual é o custo do licenciamento anual do Estado? ')
+    emplacamento = Obter_valor(msg='Qual é o valor do emplacamento de seu Estado? ')
+    duda_primeira = Obter_valor(msg='Qual é o valor do duda de primeira licença de seu Estado? ')
     soma = (taxa * (sum(lista))) + (duda * tempo) + emplacamento + duda_primeira
 
     return soma
